@@ -95,7 +95,7 @@ const App = () => {
               <Route path="/social-media-marketing" element={<SocialMediaMarketing />} />
               <Route path="/video-production" element={<VideoProduction />} />
               <Route path="/ai-solutions" element={<AiChatbot />} />
-  <Route path="/contact" element={<Contact />} />
+              <Route path="/contact" element={<Contact />} />
 
               <Route path="*" element={<NotFound />} />
             </Routes>

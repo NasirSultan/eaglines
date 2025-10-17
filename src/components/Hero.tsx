@@ -31,28 +31,31 @@ const Hero = () => {
       <div className="container px-1 relative z-10 flex flex-col md:flex-row items-center gap-1">
         {/* Left-side */}
         <div className="flex-1 text-left md:text-left space-y-0 animate-slide-up">
-          {/* Heading with Green Dot and Tooltip */}
-          <h1 className="text-5xl md:text-7xl font-bold leading-tight mt-4 relative w-fit group">
-            {/* Green Neon Dot */}
-            <div className="absolute  left-4  -translate-x-1/2 w-3 h-3 text-center items-center rounded-full bg-green-400 shadow-[0_0_8px_2px_#00FF00]" />
+         {/* Heading with Green Dot and Tooltip */}
+<h1 className="text-5xl md:text-7xl font-bold leading-tight mt-4 relative w-fit">
+  {/* Green Neon Dot with Tooltip */}
+  <div className="absolute top-2 left-2 -translate-x-1/2 group">
+    {/* Green Neon Dot */}
+    <div className="w-3 h-3 rounded-full bg-green-400 shadow-[0_0_8px_2px_#00FF00] border-green-300 border-solid border-5 cursor-pointer " />
 
-            {/* Tooltip on Hover */}
-            <div className="absolute ml-15 left-14 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20">
-              <div className="inline-flex items-center space-x-2 bg-gradient-card border border-accent/20 rounded-full px-6 py-2 shadow-lg backdrop-blur-sm animate-scale-in">
-                <Sparkles className="w-4 h-4 text-accent" />
-                <span className="text-sm font-medium text-muted-foreground">
-                  Premium Digital Solutions
-                </span>
-              </div>
-            </div>
+    {/* Tooltip on Hover */}
+    <div className="absolute ml-15 top-0 left-28 -translate-x-1/2 opacity-0 group-hover:opacity-100 transition-all duration-300 z-20 pointer-events-none ">
+      <div className="inline-flex items-center space-x-2 bg-gradient-card border border-accent/20 rounded-full px-6 py-2 shadow-lg backdrop-blur-sm animate-scale-in">
+        <Sparkles className="w-4 h-4 text-accent" />
+        <span className="text-sm font-medium text-muted-foreground w-44 ">
+          Premium Digital Solutions
+        </span>
+      </div>
+    </div>
+  </div>
 
-            {/* Main Text */}
-            <span className="bg-gradient-accent bg-clip-text text-transparent">
-              EAGLINES
-            </span>
-            <br />
-            <span className="text-foreground">Software Company</span>
-          </h1>
+  {/* Main Text */}
+  <span className="bg-gradient-accent bg-clip-text text-transparent">
+    EAGLINES
+  </span>
+  <br />
+  <span className="text-foreground">Software Company</span>
+</h1>
 
           {/* Paragraph */}
           <p className="text-xl md:text-2xl text-muted-foreground max-w-4xl leading-relaxed mt-4">
@@ -63,7 +66,7 @@ const Hero = () => {
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start pt-8">
-            <button className="group relative px-8 py-4 border-2 bg-red-700 border-red-600 hover:bg-black rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:rotate-1 whitespace-nowrap cursor-pointer overflow-hidden">
+            <button className="group relative px-8 py-2 border-2 bg-red-700 border-red-600 hover:bg-black rounded-lg text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:rotate-1 whitespace-nowrap cursor-pointer overflow-hidden">
               <span className="relative z-10">Get Started</span>
               <div className="absolute inset-0 bg-red-900 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-right"></div>
             </button>
@@ -75,9 +78,9 @@ const Hero = () => {
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 pt-16">
             {[
-              { number: "150+", label: "Projects Completed" },
-              { number: "50+", label: "Happy Clients" },
-              { number: "5+", label: "Years Experience" },
+              { number: "450+", label: "Projects Completed" },
+              { number: "132+", label: "Happy Clients" },
+              { number: "11+", label: "Years Experience" },
               { number: "24/7", label: "Support Available" },
             ].map((stat, idx) => (
               <div

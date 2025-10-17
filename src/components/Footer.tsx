@@ -71,7 +71,7 @@ const Footer = () => {
               {[Facebook, Twitter, Instagram, Linkedin].map((Icon, index) => (
                 <button
                   key={index}
-                  className="w-10 h-10 bg-gradient-card border border-accent/20 rounded-lg flex items-center justify-center hover:bg-gradient-accent hover:scale-110 transition-all duration-300 group"
+                  className="w-10 h-10 bg-gradient-card border border-accent/20 rounded-lg flex items-center justify-center hover:bg-gradient-accent hover:scale-110 transition-all duration-300 group hover:rotate-6 hover:animate-glow "
                 >
                   <Icon className="w-5 h-5 text-muted-foreground group-hover:text-primary-foreground" />
                 </button>
@@ -175,7 +175,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="py-6 border-t border-accent/10 flex flex-col md:flex-row justify-between items-center">
           <p className="text-muted-foreground text-sm">
-            © 2024 EAGLINES Software Company. All rights reserved.
+            © 2023 EAGLINES Software Company. All rights reserved.
           </p>
 
           <button
