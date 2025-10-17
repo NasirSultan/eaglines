@@ -129,10 +129,10 @@ export default function VideoProductionPage() {
       {/* Hero Section with enhanced gradient */}
       <section className="relative h-screen flex items-center justify-center overflow-hidden">
         {/* Animated gradient background */}
-        <div className="absolute  bg-gradient-to-b from-black via-red-800 to-black inset-0 opacity-80 animate-pulse-slow"></div>
+        <div className="absolute  bg-gradient-to-bl from-black via-red-800 to-black inset-0 opacity-80 animate-pulse-slow"></div>
         
         {/* Moving gradient overlay */}
-        <div className="absolute inset-0 bg-[linear-gradient(45deg,rgba(0,0,0,0.8)_0%,rgba(239,68,68,0.2)_50%,rgba(0,0,0,0.8)_100%)] bg-[length:400%_400%] animate-gradient-flow"></div>
+        <div className="absolute inset-0 animate-gradient-flow"></div>
 
         <div className="relative z-10 text-center px-4 max-w-6xl mx-auto">
           <motion.h1 

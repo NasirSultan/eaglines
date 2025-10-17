@@ -118,7 +118,7 @@ const OnlineAdvertising = () => {
             <div className="flex items-center justify-center mb-6 animate-fade-in-up">
               <Megaphone className="w-16 h-16 text-primary mr-4 animate-pulse-glow" />
             </div>
-            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-red-500 to-red-300 bg-clip-text text-transparent">
               ONLINE ADVERTISING
             </h1>
             <h2 className="text-4xl md:text-6xl font-bold mb-8 text-foreground animate-fade-in-up" style={{ animationDelay: '500ms' }}>
@@ -128,7 +128,7 @@ const OnlineAdvertising = () => {
               Drive qualified traffic, increase conversions, and maximize ROI with our data-driven online advertising campaigns across all major platforms.
             </p>
             <div className="animate-fade-in-up" style={{ animationDelay: '900ms' }}>
-              <Button size="lg" className="mr-4 bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg glow-red animate-pulse-glow">
+              <Button size="lg" className="mr-4  hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg glow-red animate-pulse-glow">
                 Start Campaign
                 <ChevronRight className="ml-2 w-5 h-5" />
               </Button>

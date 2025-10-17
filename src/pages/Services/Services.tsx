@@ -101,7 +101,7 @@ const Services = () => {
           </Badge>
           
           <h2 className="text-4xl md:text-6xl font-bold">
-            <span className="bg-gradient-accent bg-clip-text text-transparent">
+            <span className="bg-gradient-to-bl from-red-400 to-red-500 bg-clip-text text-transparent">
               SERVICES
             </span>
           </h2>
@@ -121,7 +121,7 @@ const Services = () => {
             >
               <div className="space-y-4">
                 {/* Icon */}
-                <div className="w-14 h-14 bg-gradient-accent rounded-xl flex items-center justify-center group-hover:animate-pulse">
+                <div className="w-14 h-14 bg-gradient-to-tr from-red-800 to-red-500 rounded-xl flex items-center justify-center group-hover:animate-pulse">
                   <service.icon className="w-7 h-7 text-primary-foreground" />
                 </div>
 
@@ -149,7 +149,7 @@ const Services = () => {
                 <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   {service.link ? (
                     <Link to={service.link}>
-                      <Button variant="agency" size="sm" className="w-full">
+                      <Button variant="agency" size="sm" className="w-full hover:bg-gradient-to-tl from-black to-red-600 bg-red-500">
                         Learn More
                       </Button>
                     </Link>
@@ -166,7 +166,7 @@ const Services = () => {
 
         {/* CTA Section */}
         <div className="text-center mt-16 animate-slide-up">
-          <Button variant="hero" size="xl">
+          <Button variant="hero" size="xl" className="bg-gradient-to-tr from-red-800 to-red-500">
             Get Custom Quote
           </Button>
         </div>

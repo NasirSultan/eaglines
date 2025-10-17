@@ -18,7 +18,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="min-h-screen md:container md:mx-auto px-4 flex items-center justify-center bg-gradient-hero relative overflow-hidden"
+      className="min-h-screen md:container md:mx-auto  flex items-center justify-center bg-gradient-hero relative overflow-hidden"
     >
       {/* Background Effects */}
       <div className="absolute inset-0 bg-gradient-glow animate-pulse-glow" />
@@ -50,7 +50,7 @@ const Hero = () => {
   </div>
 
   {/* Main Text */}
-  <span className="bg-gradient-accent bg-clip-text text-transparent">
+  <span className="bg-gradient-red  text-red-500">
     EAGLINES
   </span>
   <br />
@@ -126,7 +126,7 @@ const Hero = () => {
               y="4"
               width="190"
               height="190"
-              alt="Logo"
+             
               className="rounded-full shadow-lg"
             />
           </svg>
