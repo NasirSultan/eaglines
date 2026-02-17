@@ -10,12 +10,12 @@ import {
   Linkedin,
   ArrowUp
 } from "lucide-react";
-
+import { useRef } from "react";
 const Footer = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
-
+  const emailRef = useRef(null);
   const services = [
     "Graphic Design",
     "Web Development",
@@ -42,21 +42,57 @@ const Footer = () => {
         <div className="absolute bottom-0 right-1/4 w-64 h-64 bg-primary opacity-10 rounded-full blur-3xl"></div>
       </div>
 
+   <div className="py-8 border-t border-accent/10">
+          <div className="text-center space-y-4">
+            <Badge variant="secondary" className="bg-gradient-card border border-accent/20 text-accent">
+              Stay Updated
+            </Badge>
+            <h3 className="text-2xl font-bold text-foreground">
+              Subscribe to Our Newsletter
+            </h3>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Get the latest updates on digital trends, design tips, and exclusive offers delivered to your inbox.
+            </p>
+            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+          <input
+            ref={emailRef}
+            type="email"
+            placeholder="Enter your email"
+            className="flex-1 px-4 py-3 bg-gradient-card border border-accent/20 rounded-lg"
+          />
+
+          <button
+            onClick={() => {
+              const email = emailRef.current.value;
+              if (email) {
+                window.location.href = `mailto:${email}`;
+              }
+            }}
+            className="px-6 py-3 bg-accent rounded-lg"
+          >
+            Subscribe
+          </button>
+        </div>
+          </div>
+        </div>
+
+
+
       <div className="container mx-auto px-4 relative z-10">
         {/* Main Footer Content */}
         <div className="py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Company Info */}
           <div className="space-y-6">
             <div className="flex items-center space-x-3">
-             <div className="w-12 h-12 rounded-full flex items-center justify-center 
+              <div className="w-12 h-12 rounded-full flex items-center justify-center 
                 bg-gradient-to-tr from-black to-red-500 border border-slate-300 
                 shadow-red-200">
-  <img
-    src="/loader.png"
-    alt="Logo"
-    className="w-10 h-10 rounded-full object-cover"
-  />
-</div>
+                <img
+                  src="/loader.png"
+                  alt="Logo"
+                  className="w-10 h-10 rounded-full object-cover"
+                />
+              </div>
 
 
               <span className="text-2xl font-bold text-foreground">EAGLINES</span>
@@ -68,15 +104,39 @@ const Footer = () => {
             </p>
 
             <div className="flex space-x-4">
-              {[Facebook, Twitter, Instagram, Linkedin].map((Icon, index) => (
-                <button
-                  key={index}
-                  className="w-10 h-10 bg-gradient-card border border-accent/20 rounded-lg flex items-center justify-center hover:bg-gradient-accent hover:scale-110 transition-all duration-300 group"
-                >
-                  <Icon className="w-5 h-5 text-muted-foreground group-hover:text-primary-foreground" />
-                </button>
-              ))}
+              <a
+                href="https://www.facebook.com/eaglines/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-gradient-card border border-accent/20 rounded-lg flex items-center justify-center hover:bg-gradient-accent hover:scale-110 transition-all duration-300 group"
+              >
+                <Facebook className="w-5 h-5 text-muted-foreground group-hover:text-primary-foreground" />
+              </a>
+
+              <a
+                href="https://www.linkedin.com/company/eaglines/posts/?feedView=all"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-gradient-card border border-accent/20 rounded-lg flex items-center justify-center hover:bg-gradient-accent hover:scale-110 transition-all duration-300 group"
+              >
+                <Linkedin className="w-5 h-5 text-muted-foreground group-hover:text-primary-foreground" />
+              </a>
+
+              <a
+                href="#"
+                className="w-10 h-10 bg-gradient-card border border-accent/20 rounded-lg flex items-center justify-center hover:bg-gradient-accent hover:scale-110 transition-all duration-300 group"
+              >
+                <Twitter className="w-5 h-5 text-muted-foreground group-hover:text-primary-foreground" />
+              </a>
+
+              <a
+                href="#"
+                className="w-10 h-10 bg-gradient-card border border-accent/20 rounded-lg flex items-center justify-center hover:bg-gradient-accent hover:scale-110 transition-all duration-300 group"
+              >
+                <Instagram className="w-5 h-5 text-muted-foreground group-hover:text-primary-foreground" />
+              </a>
             </div>
+
           </div>
 
           {/* Services */}
@@ -118,59 +178,45 @@ const Footer = () => {
           {/* Contact Info */}
           <div className="space-y-6">
             <h3 className="text-xl font-bold text-foreground">Contact Us</h3>
+
             <div className="space-y-4">
+
               <div className="flex items-center space-x-3">
                 <div className="w-10 h-10 bg-gradient-card border border-accent/20 rounded-lg flex items-center justify-center">
                   <Mail className="w-5 h-5 text-accent" />
                 </div>
-                <span className="text-muted-foreground">info@eaglines.com</span>
+                <span className="text-muted-foreground">hr@eaglines.co</span>
               </div>
+
+
 
               <div className="flex items-center space-x-3">
                 <div className="w-10 h-10 bg-gradient-card border border-accent/20 rounded-lg flex items-center justify-center">
                   <Phone className="w-5 h-5 text-accent" />
                 </div>
-                <span className="text-muted-foreground">+1 (555) 123-4567</span>
+                <span className="text-muted-foreground">+923222502232</span>
               </div>
+
+
 
               <div className="flex items-center space-x-3">
                 <div className="w-10 h-10 bg-gradient-card border border-accent/20 rounded-lg flex items-center justify-center">
                   <MapPin className="w-5 h-5 text-accent" />
                 </div>
-                <span className="text-muted-foreground">123 Business Ave, City, State</span>
+                <span className="text-muted-foreground">Near Azadi Chowk, Lahore,Pakistan</span>
               </div>
             </div>
 
-            <Button variant="hero" size="default" className="w-full">
+            <Button size="default" className="w-full">
               Get In Touch
             </Button>
           </div>
+
         </div>
 
         {/* Newsletter Section */}
-        <div className="py-8 border-t border-accent/10">
-          <div className="text-center space-y-4">
-            <Badge variant="secondary" className="bg-gradient-card border border-accent/20 text-accent">
-              Stay Updated
-            </Badge>
-            <h3 className="text-2xl font-bold text-foreground">
-              Subscribe to Our Newsletter
-            </h3>
-            <p className="text-muted-foreground max-w-2xl mx-auto">
-              Get the latest updates on digital trends, design tips, and exclusive offers delivered to your inbox.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                className="flex-1 px-4 py-3 bg-gradient-card border border-accent/20 rounded-lg focus:border-accent focus:outline-none text-foreground placeholder-muted-foreground"
-              />
-              <Button variant="hero" size="default">
-                Subscribe
-              </Button>
-            </div>
-          </div>
-        </div>
+     
+
 
         {/* Bottom Bar */}
         <div className="py-6 border-t border-accent/10 flex flex-col md:flex-row justify-between items-center">

@@ -85,8 +85,9 @@ const Services = () => {
 
   return (
     <>
+       <Navigation />
     <section id="services" className="py-20 md:container md:mx-auto px-4 bg-gradient-hero relative overflow-hidden">
-     <Navigation />
+  
       {/* Background Effects */}
       <div className="absolute inset-0">
         <div className="absolute top-1/3 left-1/4 w-72 h-72 bg-accent opacity-10 rounded-full blur-3xl animate-float"></div>

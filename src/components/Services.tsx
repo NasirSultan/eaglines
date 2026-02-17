@@ -136,57 +136,61 @@ const Services = () => {
         </div>
 
         {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {services.map((service, index) => (
-            <Card 
-              key={index} 
-              className="p-6 bg-gradient-card border border-accent/10 hover:border-accent/30 transition-all duration-500 hover:scale-105 group cursor-pointer animate-scale-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <div className="space-y-4">
-                {/* Icon */}
-                <div className="w-14 h-14 bg-gradient-accent rounded-xl flex items-center justify-center group-hover:animate-pulse">
-                  <service.icon className="w-7 h-7 text-primary-foreground" />
-                </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+  {services.map((service, index) => {
+    const CardContent = (
+      <Card
+        className={`p-6 bg-gradient-card border border-accent/10 hover:border-accent/30 transition-all duration-500 hover:scale-105 group animate-scale-in ${
+          service.link ? "cursor-pointer" : "cursor-default"
+        }`}
+        style={{ animationDelay: `${index * 0.1}s` }}
+      >
+        <div className="space-y-4">
+          <div className="w-14 h-14 bg-gradient-accent rounded-xl flex items-center justify-center group-hover:animate-pulse">
+            <service.icon className="w-7 h-7 text-primary-foreground" />
+          </div>
 
-                {/* Title */}
-                <h3 className="text-xl font-bold text-foreground group-hover:text-accent transition-colors duration-300">
-                  {service.title}
-                </h3>
+          <h3 className="text-xl font-bold text-foreground group-hover:text-accent transition-colors duration-300">
+            {service.title}
+          </h3>
 
-                {/* Description */}
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  {service.description}
-                </p>
+          <p className="text-muted-foreground text-sm leading-relaxed">
+            {service.description}
+          </p>
 
-                {/* Features */}
-                <div className="space-y-2">
-                  {service.features.map((feature, idx) => (
-                    <div key={idx} className="flex items-center space-x-2">
-                      <div className="w-1.5 h-1.5 bg-accent rounded-full"></div>
-                      <span className="text-sm text-muted-foreground">{feature}</span>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Hover Button */}
-                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  {service.link ? (
-                    <Link to={service.link}>
-                      <Button variant="agency" size="sm" className="w-full">
-                        Learn More
-                      </Button>
-                    </Link>
-                  ) : (
-                    <Button variant="agency" size="sm" className="w-full" disabled>
-                      Coming Soon
-                    </Button>
-                  )}
-                </div>
+          <div className="space-y-2">
+            {service.features.map((feature, idx) => (
+              <div key={idx} className="flex items-center space-x-2">
+                <div className="w-1.5 h-1.5 bg-accent rounded-full"></div>
+                <span className="text-sm text-muted-foreground">{feature}</span>
               </div>
-            </Card>
-          ))}
+            ))}
+          </div>
+
+          <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            <Button
+              variant="agency"
+              size="sm"
+              className="w-full"
+              disabled={!service.link}
+            >
+              {service.link ? "Learn More" : "Coming Soon"}
+            </Button>
+          </div>
         </div>
+      </Card>
+    );
+
+    return service.link ? (
+      <Link key={index} to={service.link} className="cursor-pointer">
+        {CardContent}
+      </Link>
+    ) : (
+      <div key={index}>{CardContent}</div>
+    );
+  })}
+</div>
+
 
         {/* CTA Section */}
         <div className="text-center mt-16 animate-slide-up">

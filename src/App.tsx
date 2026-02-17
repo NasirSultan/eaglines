@@ -19,6 +19,9 @@ import SocialMediaMarketing from "./components/social-media-marketing";
 import VideoProduction from "./components/video-production";
 import AiChatbot from "./components/ai-solutions";
 import Contact from "@/pages/contact/contact";
+import Team from "@/pages/team";
+
+
 
 const queryClient = new QueryClient();
 
@@ -60,9 +63,9 @@ const App = () => {
       <TooltipProvider>
         <Toaster />
         <Sonner />
-        
+
         {/* Custom Cursor Elements */}
-        <div 
+        <div
           className="fixed w-4 h-4 bg-gradient-to-r from-red-500/30 to-red-800 rounded-full pointer-events-none z-50 transition-all duration-150 ease-out"
           style={{
             left: mousePosition.x - 8,
@@ -70,7 +73,7 @@ const App = () => {
             transform: isHovering ? 'scale(1.5)' : 'scale(1)',
           }}
         />
-        <div 
+        <div
           className="fixed w-8 h-8 border border-black rounded-full pointer-events-none z-50 transition-all duration-300 ease-out"
           style={{
             left: mousePosition.x - 16,
@@ -95,8 +98,8 @@ const App = () => {
               <Route path="/social-media-marketing" element={<SocialMediaMarketing />} />
               <Route path="/video-production" element={<VideoProduction />} />
               <Route path="/ai-solutions" element={<AiChatbot />} />
-  <Route path="/contact" element={<Contact />} />
-
+              <Route path="/contact" element={<Contact />} />
+              <Route path="/team" element={<Team />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </div>
