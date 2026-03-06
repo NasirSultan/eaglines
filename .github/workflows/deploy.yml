@@ -24,8 +24,17 @@ jobs:
       - name: Build Project
         run: npm run build
 
-      - name: Check dist folder size
+      - name: Check local dist folder size
         run: du -sh dist
+
+      - name: Check server public_html folder size
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y lftp
+          lftp -u ${{ secrets.FTP_USERNAME }},${{ secrets.FTP_PASSWORD }} ftp.eaglines.co << 'EOF'
+          du -sh public_html
+          quit
+          EOF
 
       - name: Deploy to cPanel
         uses: SamKirkland/FTP-Deploy-Action@v4.3.6
@@ -36,4 +45,4 @@ jobs:
           local-dir: dist/
           server-dir: public_html/
           exclude: "*.map,*.log"
-          dry-run: false
+          dry-run: "false"
