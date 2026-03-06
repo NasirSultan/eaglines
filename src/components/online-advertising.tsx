@@ -114,7 +114,7 @@ const OnlineAdvertising = () => {
               <Megaphone className="w-16 h-16 text-primary mr-4 animate-pulse-glow" />
             </div>
             <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-red-500 to-red-300 bg-clip-text text-transparent">
-              ONLINE ADVERTISING
+              ONLINE ADVERTISING ss
             </h1>
             <h2 className="text-4xl md:text-6xl font-bold mb-8 text-foreground animate-fade-in-up" style={{ animationDelay: '500ms' }}>
               That Actually Works
