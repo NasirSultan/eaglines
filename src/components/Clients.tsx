@@ -69,7 +69,7 @@ const Clients = () => {
           </Badge>
           
           <h2 className="text-4xl md:text-5xl font-bold">
-            What Our <span className="bg-gradient-accent bg-clip-text text-transparent">Clients Say</span>
+            What Our <span className="bg-gradient-to-tr from-red-200 to-red-500 bg-clip-text text-transparent">Clients Say</span>
           </h2>
           
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">

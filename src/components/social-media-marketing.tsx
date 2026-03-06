@@ -1,7 +1,6 @@
 import { motion } from "framer-motion";
 import { Share2, TrendingUp, Users, BarChart, Target, MessageCircle, Heart, Eye, ThumbsUp, Star, ArrowRight } from "lucide-react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import Footer from "./Footer";
 import Navigation from "./Navigation";
 
@@ -88,51 +87,30 @@ const SocialMediaMarketing = () => {
     { number: "500M+", label: "Impressions Generated" },
     { number: "2.5M+", label: "Engagement Rate" },
     { number: "150+", label: "Successful Campaigns" },
-    { number: "98%", label: "Client Satisfaction" }
+    { number: "93%", label: "Client Satisfaction" }
   ];
 
   return (
-    <div className="min-h-screen  bg-gradient-to-r from-black via-red-800 to-black text-white overflow-hidden">
-        <Navigation />
-      {/* Animated Background */}
-      <div className="fixed inset-0 pointer-events-none">
-       
-      </div>
+    <div className="min-h-screen bg-gradient-hero  text-white overflow-hidden">
+      <Navigation />
+      <div className="fixed inset-0 pointer-events-none"></div>
 
-      {/* Hero Section */}
-      <section className="relative pt-32 pb-20 px-6">
+      <section className="relative pt-36 pb-24 px-6  bg-gradient-hero ">
         <div className="max-w-7xl mx-auto text-center">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="mb-8"
-          >
+          <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} className="mb-8">
             <Share2 className="w-20 h-20 text-red-500 mx-auto mb-6" />
-            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-white via-red-200 to-red-500 bg-clip-text text-transparent">
-SOCIAL MEDIA MARKETING            </h1>
+            <h1 className="text-4xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-white via-red-200 to-red-500 bg-clip-text text-transparent">
+              SOCIAL MEDIA MARKETING
+            </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-3xl mx-auto leading-relaxed">
               Build your brand presence and engage with your audience across all social platforms with our data-driven strategies.
             </p>
           </motion.div>
 
-          {/* Stats */}
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.3 }}
-            className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16"
-          >
+          <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.3 }} className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
             {stats.map((stat, index) => (
-              <motion.div
-                key={index}
-                className="text-center"
-                whileHover={{ scale: 1.05 }}
-                transition={{ type: "spring", stiffness: 300 }}
-              >
-                <div className="text-3xl md:text-4xl font-bold text-red-500 mb-2">
-                  {stat.number}
-                </div>
+              <motion.div key={index} className="text-center" whileHover={{ scale: 1.05 }} transition={{ type: "spring", stiffness: 300 }}>
+                <div className="text-3xl md:text-4xl font-bold text-red-500 mb-2">{stat.number}</div>
                 <div className="text-gray-400 text-sm">{stat.label}</div>
               </motion.div>
             ))}
@@ -140,58 +118,24 @@ SOCIAL MEDIA MARKETING            </h1>
         </div>
       </section>
 
-      {/* Services Section */}
       <section className="py-20 px-6">
-        <div className="max-w-7xl mx-auto">
-          <motion.h2
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-4xl md:text-5xl font-bold text-center mb-16 text-red-400"
-          >
+        <div className="max-w-7xl mx-auto  text-white">
+          <motion.h2 initial={{ opacity: 0, x: -50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }} className="text-4xl md:text-5xl font-bold text-center mb-16 text-white">
             Our Services
           </motion.h2>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ 
-                  scale: 1.05,
-                  rotateY: 5,
-                  z: 50
-                }}
-                className="group perspective-1000"
-              >
-                <Card className="bg-gray-900/50 border-gray-800 hover:border-red-500/50 transition-all duration-300 backdrop-blur-sm h-full">
+              <motion.div key={index} initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} whileHover={{ scale: 1.05, rotateY: 5, z: 50 }} className="group perspective-1000">
+                <Card className="bg-gray-900/50 border-gray-800 transition-all duration-300 backdrop-blur-sm h-full">
                   <CardHeader className="text-center pb-4">
-                    <motion.div
-                      className="mx-auto mb-4 p-4 bg-red-500/10 rounded-full w-fit"
-                      whileHover={{ rotate: 360 }}
-                      transition={{ duration: 0.6 }}
-                    >
+                    <motion.div className="mx-auto mb-4 p-4 bg-red-500/10 rounded-full w-fit" whileHover={{ rotate: 360 }} transition={{ duration: 0.6 }}>
                       {service.icon}
                     </motion.div>
-                    <CardTitle className="text-xl text-white group-hover:text-red-400 transition-colors">
-                      {service.title}
-                    </CardTitle>
+                    <CardTitle className="text-xl text-white">{service.title}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <CardDescription className="text-gray-300 text-center">
-                      {service.description}
-                    </CardDescription>
-                    <div className="mt-6 text-center">
-                      <Button 
-                        variant="outline" 
-                        className="border-red-500/50 text-red-400 hover:bg-red-500/10 group"
-                      >
-                        Learn More
-                        <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                      </Button>
-                    </div>
+                    <CardDescription className="text-gray-300 text-center">{service.description}</CardDescription>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -200,56 +144,29 @@ SOCIAL MEDIA MARKETING            </h1>
         </div>
       </section>
 
-      {/* Portfolio Section */}
-      <section className="py-20 px-6 ">
+      <section className="py-20 px-6">
         <div className="max-w-7xl mx-auto">
-          <motion.h2
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className="text-4xl md:text-5xl font-bold text-center mb-16 text-red-100"
-          >
+          <motion.h2 initial={{ opacity: 0, x: 50 }} whileInView={{ opacity: 1, x: 0 }} transition={{ duration: 0.6 }} className="text-4xl md:text-5xl font-bold text-center mb-16 text-red-100">
             Portfolio Showcase
           </motion.h2>
-          
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {portfolioProjects.map((project, index) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ 
-                  scale: 1.03,
-                  rotateX: 5,
-                  rotateY: 5
-                }}
-                className="group perspective-1000"
-              >
+              <motion.div key={index} initial={{ opacity: 0, scale: 0.8 }} whileInView={{ opacity: 1, scale: 1 }} transition={{ duration: 0.6, delay: index * 0.1 }} whileHover={{ scale: 1.03, rotateX: 5, rotateY: 5 }} className="group perspective-1000">
                 <Card className="bg-black/70 border-gray-800 hover:border-red-500/50 transition-all duration-500 backdrop-blur-sm overflow-hidden">
                   <div className="relative overflow-hidden">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110"
-                    />
+                    <img src={project.image} alt={project.title} className="w-full h-48 object-cover transition-transform duration-500 group-hover:scale-110" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
                     <div className="absolute top-4 right-4">
-                      <span className="bg-red-500/90 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                        {project.platform}
-                      </span>
+                      <span className="bg-red-500/90 text-white px-3 py-1 rounded-full text-sm font-semibold">{project.platform}</span>
                     </div>
                   </div>
-                  
+
                   <CardHeader className="pb-2">
-                    <CardTitle className="text-lg text-white group-hover:text-red-400 transition-colors">
-                      {project.title}
-                    </CardTitle>
-                    <div className="text-2xl font-bold text-red-500">
-                      {project.results}
-                    </div>
+                    <CardTitle className="text-lg text-white">{project.title}</CardTitle>
+                    <div className="text-2xl font-bold text-red-500">{project.results}</div>
                   </CardHeader>
-                  
+
                   <CardContent>
                     <div className="flex justify-between text-sm text-gray-400 mb-4">
                       <div className="flex items-center">
@@ -265,14 +182,6 @@ SOCIAL MEDIA MARKETING            </h1>
                         {project.metrics.shares}
                       </div>
                     </div>
-                    
-                    <Button 
-                      className="w-full bg-red-700 hover:bg-red-600 text-white group"
-                      size="sm"
-                    >
-                      View Case Study
-                      <Eye className="ml-2 w-4 h-4 group-hover:scale-110 transition-transform" />
-                    </Button>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -281,27 +190,17 @@ SOCIAL MEDIA MARKETING            </h1>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-20 px-6 ">
+      <section className="py-20 px-6">
         <div className="max-w-4xl mx-auto text-center">
-         
-            <h2 className="text-4xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-red-400 to-red-600 bg-clip-text ">
-              Ready to Dominate Social Media?
-            </h2>
-            <p className="text-xl text-gray-300 mb-12 leading-relaxed">
-              Let's create a social media strategy that builds your brand, engages your audience, and drives real results.
-            </p>
-           
-              <Button 
-                size="lg" 
-                className="bg-gradient-to-r from-red-500 to-red-700 hover:from-red-600 hover:to-red-800 text-white px-12 py-6 text-lg font-semibold rounded-full shadow-2xl shadow-red-500/25"
-              >
-                Start Your Campaign Today
-                <ArrowRight className="ml-3 w-5 h-5" />
-              </Button>
-            
+          <h2 className="text-4xl md:text-6xl font-bold mb-8 bg-gradient-to-r from-red-400 to-red-600 bg-clip-text">
+            Ready to Dominate Social Media?
+          </h2>
+          <p className="text-xl text-gray-300 mb-12 leading-relaxed">
+            Let's create a social media strategy that builds your brand, engages your audience, and drives real results.
+          </p>
         </div>
       </section>
+
       <Footer />
     </div>
   );

@@ -20,7 +20,7 @@ import VideoProduction from "./components/video-production";
 import AiChatbot from "./components/ai-solutions";
 import Contact from "@/pages/contact/contact";
 import Team from "@/pages/team";
-
+import Casestudy from "@/pages/Casestudy/Case";
 
 
 const queryClient = new QueryClient();
@@ -100,6 +100,7 @@ const App = () => {
               <Route path="/ai-solutions" element={<AiChatbot />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/team" element={<Team />} />
+                   <Route path="/Casestudy" element={<Casestudy />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </div>

@@ -9,7 +9,7 @@ import pic5 from "./pi-5.png";
 import pic6 from "./pi-6.png";
 import pic7 from "./pi-7.png";
 import pic8 from "./pi-8.png";
-
+import { FiUser } from 'react-icons/fi';
 
 const App: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -22,7 +22,7 @@ const App: React.FC = () => {
       title: 'Toe Tet – Interactive E-Learning Platform',
       category: 'Mobile App',
       image: 'https://play-lh.googleusercontent.com/OkVM7Cp_U9wlfA6NnG1zv_zqe4Y6QhCPVODXKqTL4ti5OD3ZMz8B-H_uyRbRh7uB=w2560-h1440-rw',
-      web: null,
+      web: "https://www.toetet.com/home",
       android: "https://play.google.com/store/apps/details?id=com.toetet.user&hl=en_US",
       ios: 'https://apps.apple.com/us/app/toe-tet-e-learning-platform/id6480333894'
     },
@@ -35,7 +35,7 @@ const App: React.FC = () => {
       ios: null
     },
     {
-      title: 'Matter AR',
+      title: 'Matter AR – Augmented Reality Learning Platform',
       category: 'Augmented Reality App',
       image: 'https://play-lh.googleusercontent.com/rXFYMs4voFjzRmNctbL7YGURHcgvlQQCW9Ewz_KyTAWb3BVILdh656QB3Z33kQgVSPk=w2560-h1440-rw',
       web: null,
@@ -44,7 +44,7 @@ const App: React.FC = () => {
     },
     {
 
-      title: 'UniDoc – Doctor Appointment App',
+      title: 'UniDoc – Smart Doctor Appointment ',
       category: 'Mobile Application',
       image: 'https://play-lh.googleusercontent.com/WDwiVbQaVsKDM5AlLyoZYIGj2hQxOmnIsK81NgN2BMa1IRE_PNwlXhTJOjTZwbiDPoE=w2560-h1440-rw', // add a screenshot or placeholder image
       web: null,
@@ -54,7 +54,7 @@ const App: React.FC = () => {
 
     },
     {
-      title: "Clique for Pets",
+      title: "Clique for Pets – Social Platform for Pet Lovers",
       category: "iOS Mobile App",
       image: pic3,
       web: null,
@@ -64,7 +64,7 @@ const App: React.FC = () => {
 
     ,
     {
-      "title": "Trotter It – AI Travel Journal",
+      "title": "Trotter It – AI Travel Journal for Personalized Adventures",
       "category": "Mobile App",
       "image": "https://play-lh.googleusercontent.com/6Ejy5O6xAPnQJTqAHmMyKtpHBjRrT2H9fT0fqWNq9yuZqyFT23z9n35o6JzOvDZP0oo=w2560-h1440-rw",
       "web": null,
@@ -72,7 +72,7 @@ const App: React.FC = () => {
       "ios": "https://apps.apple.com/us/app/trotter-it-travel-journal-app/id6443733048"
     },
     {
-      "title": "Event Check-in App",
+      "title": "Event Check-in App – Seamless Attendance Management",
       "category": "Mobile App",
       "image": "https://play-lh.googleusercontent.com/qB9qIIYx3mGB-vl7YzI0y05MeE6vIbjNyUwQPEObxPRfRPTC9-UVq4SXxFMfIKKQjr8=w2560-h1440-rw",
       "web": null,
@@ -81,7 +81,7 @@ const App: React.FC = () => {
     }
     ,
     {
-      "title": "HyperWrite AI – Writing Assistant",
+      "title": "HyperWrite AI – Writing Assistant for Smarter Content Creation",
       "category": "Web Application",
       "image": pic4,
       "web": "https://www.hyperwriteai.com",
@@ -89,7 +89,7 @@ const App: React.FC = () => {
       "ios": null
     },
     {
-      "title": "Eat App – Restaurant Management",
+      "title": "Eat App – Restaurant Management and Reservation System",
       "category": "Web Application",
       "image": pic5,
       "web": "https://restaurant.eatapp.co/",
@@ -187,9 +187,9 @@ const App: React.FC = () => {
       {/* Hero Section with Animated Gradient */}
       <div className="relative overflow-hidden">
         <div className="absolute inset-0  to-black animate-pulse"></div>
-        <div className={`max-w-7xl mx-auto px-6 pt-32 pb-20 relative transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
+        <div className={`max-w-7xl mx-auto px-6 pt-32  relative transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h1 className="text-5xl md:text-7xl font-bold text-white mb-6">
-            Web <span className="text-red-500">Development</span>
+            Software <span className="text-red-500">Development</span>
           </h1>
           <p className="text-xl text-gray-300 max-w-2xl">
             Creating powerful, scalable, and innovative web solutions that drive business growth and user engagement.
@@ -220,7 +220,7 @@ const App: React.FC = () => {
       </section>
       {/* Technologies Section */}
 
-      <section className="py-20 px-6bg-gradient-to-r from-black to-red-600/10 relative">
+      <section className="pt-20 px-6bg-gradient-to-r from-black to-red-600/10 relative">
         <div className="max-w-6xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-red-300 bg-clip-text text-transparent">
@@ -231,7 +231,7 @@ const App: React.FC = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
             {portfolio.map((project, index) => (
               <div
                 key={index}
@@ -310,13 +310,13 @@ const App: React.FC = () => {
 
 
 
-          <div className="text-center mt-12">
+          {/* <div className="text-center mt-12">
             <button className="group relative px-8 py-4 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:rotate-1 whitespace-nowrap cursor-pointer overflow-hidden">
               <span className="relative z-10">View All Projects</span>
               <div className="absolute inset-0 bg-gradient-to-r from-red-500 to-red-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center"></div>
               <div className="absolute top-0 -left-full w-full h-full bg-white/20 transform skew-x-12 group-hover:left-full transition-all duration-700"></div>
             </button>
-          </div>
+          </div> */}
         </div>
 
         {/* Floating Background Elements */}
@@ -327,9 +327,9 @@ const App: React.FC = () => {
         </div>
       </section>
       {/* Process Section */}
-      <section className="py-20 px-6">
+      <section className="pt-20 px-6">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white mb-12 text-center">Our Development Process</h2>
+          <h2 className="text-5xl font-bold text-white mb-12 text-center">Our Development Process</h2>
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
             <div className="relative">
               <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center mb-6 mx-auto">
@@ -380,7 +380,7 @@ const App: React.FC = () => {
         </div>
       </section>
       {/* About Section */}
-      <section className="py-16 px-6 bg-gradient-to- from-black to-red-600/10 relative">
+      <section className="py-10 px-6 bg-gradient-to- from-black to-red-600/10 relative">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
             <div className={`space-y-6 ${isVisible ? 'animate-fadeInLeft' : 'opacity-0'}`}>
@@ -430,30 +430,31 @@ const App: React.FC = () => {
       {/* Happy Clients Section */}
       <section className="py-16 px-6 bg-gradient-to-nr from-black to-red-600/10">
         <div className="max-w-7xl mx-auto">
-          <h2 className="text-3xl font-bold text-white text-center mb-12">Happy Clients</h2>
+          <h2 className="text-5xl font-bold text-white text-center mb-12">
+            Happy Clients
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {/* Client Card 1 */}
-            <div className={`bg-gradient-to-br from-black to-red-900/30 p-8 rounded-lg border border-red-500/20 transform hover:-translate-y-2 transition-all duration-300 ${isVisible ? 'animate-fadeInUp' : 'opacity-0'}`} style={{ animationDelay: '0.2s' }}>
-              <div className="flex items-center mb-6">
-                <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center">
-                  <i className="fas fa-user text-white text-2xl"></i>
-                </div>
-                <div className="ml-4">
-                  <h4 className="text-white font-bold">John Smith</h4>
-                  <p className="text-gray-400">CEO, Tech Solutions</p>
-                </div>
-              </div>
-              <p className="text-gray-300">
-                "Outstanding web development service! They transformed our vision into a stunning reality. The team's expertise and dedication were exceptional."
-              </p>
-            </div>
-
+           <div className={`bg-gradient-to-br from-black to-red-900/30 p-8 rounded-lg border border-red-500/20 transform hover:-translate-y-2 transition-all duration-300 ${isVisible ? 'animate-fadeInUp' : 'opacity-0'}`} style={{ animationDelay: '0.2s' }}>
+  <div className="flex items-center mb-6">
+    <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center">
+      <FiUser className="text-white text-2xl" />
+    </div>
+    <div className="ml-4">
+      <h4 className="text-white font-bold">John Smith</h4>
+      <p className="text-gray-400">CEO, Tech Solutions</p>
+    </div>
+  </div>
+  <p className="text-gray-300">
+    "Outstanding web development service! They transformed our vision into a stunning reality. The team's expertise and dedication were exceptional."
+  </p>
+</div>
             {/* Client Card 2 */}
             <div className={`bg-gradient-to-br from-black to-red-900/30 p-8 rounded-lg border border-red-500/20 transform hover:-translate-y-2 transition-all duration-300 ${isVisible ? 'animate-fadeInUp' : 'opacity-0'}`} style={{ animationDelay: '0.4s' }}>
               <div className="flex items-center mb-6">
                 <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center">
-                  <i className="fas fa-user text-white text-2xl"></i>
-                </div>
+      <FiUser className="text-white text-2xl" />
+    </div>
                 <div className="ml-4">
                   <h4 className="text-white font-bold">Sarah Johnson</h4>
                   <p className="text-gray-400">Marketing Director</p>
@@ -468,8 +469,8 @@ const App: React.FC = () => {
             <div className={`bg-gradient-to-br from-black to-red-900/30 p-8 rounded-lg border border-red-500/20 transform hover:-translate-y-2 transition-all duration-300 ${isVisible ? 'animate-fadeInUp' : 'opacity-0'}`} style={{ animationDelay: '0.6s' }}>
               <div className="flex items-center mb-6">
                 <div className="w-16 h-16 bg-red-500 rounded-full flex items-center justify-center">
-                  <i className="fas fa-user text-white text-2xl"></i>
-                </div>
+      <FiUser className="text-white text-2xl" />
+    </div>
                 <div className="ml-4">
                   <h4 className="text-white font-bold">Michael Chen</h4>
                   <p className="text-gray-400">Startup Founder</p>

@@ -56,56 +56,56 @@ export default function UIUXPage() {
     }
   ];
 
-  const portfolio = [
-    {
-      title: "Pubbli",
-      category: "Mobile App",
-      image: pic9,
-      figmaWeb: "https:",
-      figmaDesktop: null,
-      figmaMobile: "https://www.figma.com/design/ohMTU2SeVzSJuuCkKRCpcx/Pubblie--Copy-?node-id=2109-16894&p=f&t=6hmlbMDBTZUWUKNx-0",
-    },
-    {
-      title: "Inspirational Quote – Tony Robbins",
-      category: "Game UI/UX",
-      image: pic10,
-      figmaWeb: "null",
-      figmaDesktop: "https://www.figma.com/design/sSBDzpW3vGRBeqllMGSE2r/Untitled--Copy-?node-id=135-68962&p=f&t=tTH476PPLMCEwtJZ-0",
-      figmaMobile: null,
-    },
-    {
-      title: "ArtMatch – Report a Concern",
-      category: "Art App",
-      image: pic11,
-      figmaWeb: "https://www.figma.com/design/Hh0CTSwOWqvUuEbqVllJR7/Artmatch--Copy-?node-id=195-936&t=xbY27oQX3JbV8mmM-0",
-      figmaDesktop: null,
-      figmaMobile: "https://www.figma.com/design/Hh0CTSwOWqvUuEbqVllJR7/Artmatch--Copy-?node-id=195-936&t=xbY27oQX3JbV8mmM-0",
-    },
-    {
-      title: "Clique for Pets",
-      category: "iOS Mobile App",
-      image: pic12,
-      figmaWeb: "https",
-      figmaDesktop: null,
-      figmaMobile: "https://www.figma.com/design/dAGsLDJzBiyLWAYP7lrjet/Clique--Copy-?node-id=75-864&t=8NNwO1U1X4W4VaTm-0https://www.figma.com/design/dAGsLDJzBiyLWAYP7lrjet/Clique--Copy-?node-id=75-864&t=8NNwO1U1X4W4VaTm-0",
-    },
-    {
-      title: "Start Cooking – Join the Community",
-      category: "Mobile App",
-      image: pic13,
-      figmaWeb: "https",
-      figmaDesktop: null,
-      figmaMobile: "https://www.figma.com/design/ogpeOZ4YjbVCRbSHQMLMoN/Chefio---Recipe-App--Copy-?node-id=156-0&p=f&t=FEQBQIoukD2mZETB-0",
-    }, {
-      title: "Start Cooking – Join the Community",
-      category: "Mobile App",
-      image: pic14,
-      figmaWeb: "https",
-      figmaDesktop: "https://www.figma.com/design/RXCsKSDeiXgxtjkgCa2B98/Card-Craft-Manufacturer?node-id=1810-27161&t=fadzNrjM0OvxMupA-0",
-      figmaMobile: null,
-    },
-
-  ];
+const portfolio = [
+  {
+    title: "Pubbli - Mobile App Design Project",
+    category: "Mobile App",
+    image: pic9,
+    figmaWeb: "https:",
+    figmaDesktop: null,
+    figmaMobile: "https://www.figma.com/design/ohMTU2SeVzSJuuCkKRCpcx/Pubblie--Copy-?node-id=2109-16894&p=f&t=6hmlbMDBTZUWUKNx-0",
+  },
+  {
+    title: "Inspirational Quote – Tony Robbins Experience",
+    category: "Game UI/UX",
+    image: pic10,
+    figmaWeb: "null",
+    figmaDesktop: "https://www.figma.com/design/sSBDzpW3vGRBeqllMGSE2r/Untitled--Copy-?node-id=135-68962&p=f&t=tTH476PPLMCEwtJZ-0",
+    figmaMobile: null,
+  },
+  {
+    title: "ArtMatch – Report a Concern Feature",
+    category: "Art App",
+    image: pic11,
+    figmaWeb: "https://www.figma.com/design/Hh0CTSwOWqvUuEbqVllJR7/Artmatch--Copy-?node-id=195-936&t=xbY27oQX3JbV8mmM-0",
+    figmaDesktop: null,
+    figmaMobile: "https://www.figma.com/design/Hh0CTSwOWqvUuEbqVllJR7/Artmatch--Copy-?node-id=195-936&t=xbY27oQX3JbV8mmM-0",
+  },
+  {
+    title: "Clique for Pets Mobile Application Design",
+    category: "iOS Mobile App",
+    image: pic12,
+    figmaWeb: "https",
+    figmaDesktop: null,
+    figmaMobile: "https://www.figma.com/design/dAGsLDJzBiyLWAYP7lrjet/Clique--Copy-?node-id=75-864&t=8NNwO1U1X4W4VaTm-0https://www.figma.com/design/dAGsLDJzBiyLWAYP7lrjet/Clique--Copy-?node-id=75-864&t=8NNwO1U1X4W4VaTm-0",
+  },
+  {
+    title: "Start Cooking – Join the Community App",
+    category: "Mobile App",
+    image: pic13,
+    figmaWeb: "https",
+    figmaDesktop: null,
+    figmaMobile: "https://www.figma.com/design/ogpeOZ4YjbVCRbSHQMLMoN/Chefio---Recipe-App--Copy-?node-id=156-0&p=f&t=FEQBQIoukD2mZETB-0",
+  },
+  {
+    title: "Start Cooking – Join the Community Platform",
+    category: "Mobile App",
+    image: pic14,
+    figmaWeb: "https",
+    figmaDesktop: "https://www.figma.com/design/RXCsKSDeiXgxtjkgCa2B98/Card-Craft-Manufacturer?node-id=1810-27161&t=fadzNrjM0OvxMupA-0",
+    figmaMobile: null,
+  },
+];
 
   const clients = [
     { name: 'Sarah Johnson', role: 'Product Manager', company: 'TechCorp', rating: 5, review: 'Exceptional UI/UX design that transformed our user engagement by 300%. The attention to detail is remarkable.' },
@@ -159,15 +159,21 @@ export default function UIUXPage() {
               Crafting exceptional digital experiences through innovative design, user research, and cutting-edge interface solutions that drive engagement and conversions.
             </p>
             <div className={`flex flex-col sm:flex-row gap-4 justify-center transition-all duration-1000 delay-1000 ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-              <button className="group relative px-8 py-4 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:-rotate-1 whitespace-nowrap cursor-pointer overflow-hidden">
-                <span className="relative z-10">View Portfolio</span>
-                <div className="absolute inset-0 bg-gradient-to-r from-red-500 to-red-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
-                <div className="absolute top-0 -left-full w-full h-full bg-white/20 transform skew-x-12 group-hover:left-full transition-all duration-700"></div>
-              </button>
-              <button className="group relative px-8 py-4 border-2 border-red-600 hover:bg-red-600 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:rotate-1 whitespace-nowrap cursor-pointer overflow-hidden">
-                <span className="relative z-10">Get Quote</span>
-                <div className="absolute inset-0 bg-red-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-right"></div>
-              </button>
+              <button
+  onClick={() => document.getElementById('portfolio').scrollIntoView({ behavior: 'smooth' })}
+  className="group relative px-8 py-4 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:-rotate-1 whitespace-nowrap cursor-pointer overflow-hidden"
+>
+  <span className="relative z-10">View Portfolio</span>
+  <div className="absolute inset-0 bg-gradient-to-r from-red-500 to-red-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
+  <div className="absolute top-0 -left-full w-full h-full bg-white/20 transform skew-x-12 group-hover:left-full transition-all duration-700"></div>
+</button>
+              <button
+  onClick={() => window.location.href = '/contact'}
+  className="group relative px-8 py-4 border-2 border-red-600 hover:bg-red-600 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:rotate-1 whitespace-nowrap cursor-pointer overflow-hidden"
+>
+  <span className="relative z-10">Get Quote</span>
+  <div className="absolute inset-0 bg-red-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-right"></div>
+</button>
             </div>
           </div>
 
@@ -256,7 +262,7 @@ export default function UIUXPage() {
         </section>
 
         {/* Portfolio Section with Advanced Hover Effects */}
-        <section className="py-20 px-6  bg-gradient-to-tl from-black via-red-900/20 to-black relative">
+<section id="portfolio" className="py-20 px-6 bg-gradient-to-tl from-black via-red-900/20 to-black relative">
           <div className="max-w-6xl mx-auto">
             <div className="text-center mb-16">
               <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-red-300 bg-clip-text text-transparent">
@@ -342,13 +348,13 @@ export default function UIUXPage() {
             </div>
 
 
-            <div className="text-center mt-12">
+            {/* <div className="text-center mt-12">
               <button className="group relative px-8 py-4 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:rotate-1 whitespace-nowrap cursor-pointer overflow-hidden">
                 <span className="relative z-10">View All Projects</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-red-500 to-red-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-center"></div>
                 <div className="absolute top-0 -left-full w-full h-full bg-white/20 transform skew-x-12 group-hover:left-full transition-all duration-700"></div>
               </button>
-            </div>
+            </div> */}
           </div>
 
           {/* Floating Background Elements */}
@@ -360,65 +366,70 @@ export default function UIUXPage() {
         </section>
 
         {/* Happy Clients Section with Enhanced Animations */}
-        <section className="py-20 px-6 relative  bg-gradient-to-bl from-black via-red-900/20 to-black">
-          <div className="max-w-6xl mx-auto">
-            <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-red-300 bg-clip-text text-transparent">
-                <span className="inline-block hover:animate-pulse hover:scale-110 transition-all duration-300 cursor-default">HAPPY CLIENTS</span>
-              </h2>
-              <p className="text-xl text-gray-400 max-w-3xl mx-auto hover:text-red-200 transition-colors duration-500 cursor-default">
-                What our clients say about our UI/UX design work
-              </p>
-            </div>
+     <section className="py-20 px-6 relative bg-gradient-to-bl from-black via-red-900/20 to-black">
+  <div className="max-w-6xl mx-auto">
+    <div className="text-center mb-16">
+     <h2 className="text-5xl font-bold mb-6 bg-gradient-to-r from-white to-red-300 bg-clip-text text-transparent">
+  HAPPY CLIENTS
+</h2>
+      <p className="text-xl text-gray-400 max-w-3xl mx-auto hover:text-white transition-colors duration-500 cursor-default">
+        What our clients say about our UI/UX design work
+      </p>
+    </div>
 
-            <div className="grid md:grid-cols-2 gap-8">
-              {clients.map((client, index) => (
-                <div
-                  key={index}
-                  className={`group relative bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm rounded-2xl p-8 border border-gray-800 hover:border-red-600/50 transition-all duration-500 transform hover:-translate-y-4 hover:scale-105 hover:shadow-2xl hover:shadow-red-600/30 cursor-pointer ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}
-                  style={{ transitionDelay: `${index * 200}ms` }}
-                >
-                  {/* Animated Quote Mark */}
-                  <div className="absolute top-4 left-4 text-6xl text-red-500/20 group-hover:text-red-500/40 group-hover:animate-pulse transition-all duration-500">"</div>
+    <div className="grid md:grid-cols-2 gap-8">
+      {clients.map((client, index) => (
+        <div
+          key={index}
+          className={`group relative bg-gradient-to-br from-gray-900/50 to-gray-800/30 backdrop-blur-sm rounded-2xl p-8 border border-gray-800 hover:border-red-600/50 transition-all duration-500 transform hover:-translate-y-4 hover:scale-105 hover:shadow-2xl hover:shadow-red-600/30 cursor-pointer ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-20 opacity-0'}`}
+          style={{ transitionDelay: `${index * 200}ms` }}
+        >
+          <div className="absolute top-4 left-4 text-6xl text-red-500/20 group-hover:text-red-500/40 group-hover:animate-pulse transition-all duration-500">"</div>
 
-                  <div className="relative z-10">
-                    <div className="flex items-center mb-6">
-                      {[...Array(client.rating)].map((_, i) => (
-                        <i key={i} className="ri-star-fill text-red-500 text-lg mr-1 group-hover:animate-pulse transition-all duration-300" style={{ animationDelay: `${i * 100}ms` }}></i>
-                      ))}
-                    </div>
-
-                    <p className="text-gray-300 text-lg mb-6 leading-relaxed italic group-hover:text-white transition-colors duration-300">
-                      "{client.review}"
-                    </p>
-
-                    <div className="flex items-center">
-                      <div className="w-12 h-12 bg-gradient-to-br from-red-600 to-red-700 rounded-full flex items-center justify-center mr-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-red-500/50">
-                        <span className="text-white font-bold text-lg group-hover:animate-pulse">
-                          {client.name.split(' ').map(n => n[0]).join('')}
-                        </span>
-                      </div>
-                      <div>
-                        <h4 className="font-bold text-white group-hover:text-red-300 transition-colors duration-300">{client.name}</h4>
-                        <p className="text-gray-400 text-sm group-hover:text-gray-200 transition-colors duration-300">{client.role} at {client.company}</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Animated Corner Highlights */}
-                  <div className="absolute top-0 right-0 w-0 h-0 border-t-4 border-r-4 border-red-500 group-hover:border-red-500/60 border-transparent rounded-tr-2xl transition-all duration-500 group-hover:w-6 group-hover:h-6"></div>
-                  <div className="absolute bottom-0 left-0 w-0 h-0 border-b-4 border-l-4 border-red-500 group-hover:border-red-500/60 border-transparent rounded-bl-2xl transition-all duration-500 delay-200 group-hover:w-6 group-hover:h-6"></div>
-                </div>
+          <div className="relative z-10">
+            <div className="flex items-center mb-6">
+              {[...Array(client.rating)].map((_, i) => (
+                <i
+                  key={i}
+                  className="ri-star-fill text-red-500 text-lg mr-1 group-hover:animate-pulse transition-all duration-300"
+                  style={{ animationDelay: `${i * 100}ms` }}
+                ></i>
               ))}
             </div>
+
+            <p className="text-gray-300 text-lg mb-6 leading-relaxed italic group-hover:text-white transition-colors duration-300">
+              "{client.review}"
+            </p>
+
+            <div className="flex items-center">
+              <div className="w-12 h-12 bg-gradient-to-br from-red-600 to-red-700 rounded-full flex items-center justify-center mr-4 group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 group-hover:shadow-lg group-hover:shadow-red-500/50">
+                <span className="text-white font-bold text-lg group-hover:animate-pulse">
+                  {client.name.split(' ').map(n => n[0]).join('')}
+                </span>
+              </div>
+              <div>
+                <h4 className="font-bold text-white group-hover:text-white transition-colors duration-300">
+                  {client.name}
+                </h4>
+                <p className="text-gray-400 text-sm group-hover:text-white transition-colors duration-300">
+                  {client.role} at {client.company}
+                </p>
+              </div>
+            </div>
           </div>
 
-          {/* Background Animation Elements */}
-          <div className="absolute inset-0 overflow-hidden pointer-events-none">
-            <div className="absolute top-1/4 -left-16 w-32 h-32 bg-red-500/5 rounded-full blur-2xl animate-pulse delay-500"></div>
-            <div className="absolute bottom-1/4 -right-16 w-24 h-24 bg-red-600/5 rounded-full blur-xl animate-bounce delay-1500"></div>
-          </div>
-        </section>
+          <div className="absolute top-0 right-0 w-0 h-0 border-t-4 border-r-4 border-red-500 group-hover:border-red-500/60 border-transparent rounded-tr-2xl transition-all duration-500 group-hover:w-6 group-hover:h-6"></div>
+          <div className="absolute bottom-0 left-0 w-0 h-0 border-b-4 border-l-4 border-red-500 group-hover:border-red-500/60 border-transparent rounded-bl-2xl transition-all duration-500 delay-200 group-hover:w-6 group-hover:h-6"></div>
+        </div>
+      ))}
+    </div>
+  </div>
+
+  <div className="absolute inset-0 overflow-hidden pointer-events-none">
+    <div className="absolute top-1/4 -left-16 w-32 h-32 bg-red-500/5 rounded-full blur-2xl animate-pulse delay-500"></div>
+    <div className="absolute bottom-1/4 -right-16 w-24 h-24 bg-red-600/5 rounded-full blur-xl animate-bounce delay-1500"></div>
+  </div>
+</section>
 
         {/* About Section with Maximum Animations */}
         <section className="py-20 px-6  bg-gradient-to-tl from-black via-red-900/20 to-black relative">
@@ -486,7 +497,7 @@ export default function UIUXPage() {
                   </div>
                 </div>
 
-                <div className="relative group">
+                {/* <div className="relative group">
                   <button className="px-8 py-4 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-125 hover:-rotate-3 hover:translate-y-2 whitespace-nowrap cursor-pointer shadow-lg hover:shadow-2xl hover:shadow-red-500/50 group-hover:animate-pulse relative overflow-hidden">
                     <span className="relative z-10">Start Your Project</span>
                     <div className="absolute inset-0 bg-gradient-to-r from-red-500 to-red-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
@@ -494,7 +505,7 @@ export default function UIUXPage() {
                   </button>
                   <div className="absolute inset-0 bg-gradient-to-r from-red-600 to-red-700 rounded-full opacity-0 group-hover:opacity-40 blur-xl transition-opacity duration-500 group-hover:animate-ping"></div>
                   <div className="absolute -inset-4 border-2 border-red-500/0 group-hover:border-red-500/30 rounded-full transition-all duration-700 group-hover:animate-spin"></div>
-                </div>
+                </div> */}
               </div>
 
               <div className={`relative transition-all duration-1000 delay-300 ${isLoaded ? 'translate-x-0 opacity-100' : 'translate-x-20 opacity-0'}`}>
@@ -539,22 +550,22 @@ export default function UIUXPage() {
         </section>
 
         {/* CTA Section with Ultimate Animations */}
-        <section className="py-20 px-6 bg-gradient-to-r from-red-900/20 to-black relative overflow-hidden">
+        <section 
+        
+        className="py-20 px-6 bg-gradient-to-r from-red-900/20 to-black relative overflow-hidden">
           <div className="max-w-4xl mx-auto text-center relative z-10">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 bg-gradient-to-r from-white to-red-300 bg-clip-text text-transparent">
-              <span className="inline-block hover:animate-pulse hover:scale-110 transition-all duration-300 cursor-default">READY TO TRANSFORM YOUR DIGITAL EXPERIENCE</span>
-            </h2>
+             READY TO TRANSFORM YOUR DIGITAL EXPERIENCE
+           </h2>
             <div className="flex flex-col sm:flex-row gap-4 justify-center mt-10">
-              <button className="group relative px-8 py-4 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:-rotate-1 whitespace-nowrap cursor-pointer overflow-hidden">
+              <button 
+                onClick={() => window.location.href = '/contact'}
+              className="group relative px-8 py-4 bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-105 hover:-rotate-1 whitespace-nowrap cursor-pointer overflow-hidden">
                 <span className="relative z-10">Start Your Project</span>
                 <div className="absolute inset-0 bg-gradient-to-r from-red-500 to-red-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
                 <div className="absolute top-0 -left-full w-full h-full bg-white/30 transform skew-x-12 group-hover:left-full transition-all duration-700"></div>
               </button>
-              <button className="group relative px-8 py-4 border-2 border-red-600 hover:bg-red-600 rounded-full text-lg font-semibold transition-all duration-300 transform hover:scale-110 hover:rotate-2 hover:-translate-y-1 whitespace-nowrap cursor-pointer overflow-hidden">
-                <span className="relative z-10">View Our Process</span>
-                <div className="absolute inset-0 bg-red-600 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left"></div>
-                <div className="absolute -inset-2 border-2 border-red-500/0 group-hover:border-red-500/40 rounded-full transition-all duration-500 group-hover:animate-spin"></div>
-              </button>
+             
             </div>
           </div>
 

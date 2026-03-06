@@ -125,7 +125,7 @@ const Services = () => {
           </Badge>
           
           <h2 className="text-4xl md:text-6xl font-bold">
-            <span className="bg-gradient-accent bg-clip-text text-transparent">
+            <span className="bg-red-400 bg-clip-text text-transparent">
               SERVICES
             </span>
           </h2>
@@ -194,7 +194,7 @@ const Services = () => {
 
         {/* CTA Section */}
         <div className="text-center mt-16 animate-slide-up">
-          <Button variant="hero" size="xl">
+          <Button variant="hero" size="xl" className="bg-gradient-to-tr from-red-800 to-red-500">
             Get Custom Quote
           </Button>
         </div>

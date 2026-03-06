@@ -71,11 +71,7 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="mt-16 pt-8 border-t border-border/30 text-center">
-              <p className="text-sm text-muted-foreground">
-                © 2024 Studio. All rights reserved.
-              </p>
-            </div>
+           
           </div>
         </div>
       </div>

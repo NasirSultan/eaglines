@@ -44,7 +44,7 @@ const About = () => {
             </Badge>
             
             <h2 className="text-4xl md:text-5xl font-bold leading-tight">
-              Creating <span className="bg-gradient-accent bg-clip-text text-transparent">Beautiful</span> Digital Experiences
+              Creating <span className="bg-red-500 bg-clip-text text-transparent">Beautiful</span> Digital Experiences
             </h2>
             
             <p className="text-lg text-muted-foreground leading-relaxed">
@@ -68,7 +68,7 @@ const About = () => {
               </div>
             </div>
 
-            <Button variant="hero" size="lg" className="mt-8">
+            <Button variant="hero" size="lg" className="mt-8 bg-gradient-to-tr from-red-800 to-red-500">
               Learn More About Us
             </Button>
           </div>
@@ -78,7 +78,7 @@ const About = () => {
             {features.map((feature, index) => (
               <Card key={index} className="p-6 bg-gradient-card border border-accent/10 hover:border-accent/30 transition-all duration-300 hover:scale-105 group">
                 <div className="space-y-4">
-                  <div className="w-12 h-12 bg-gradient-accent rounded-lg flex items-center justify-center group-hover:animate-pulse">
+                  <div className="w-12 h-12 bg-gradient-to-tr from-red-800 to-red-500 rounded-lg flex items-center justify-center group-hover:animate-pulse">
                     <feature.icon className="w-6 h-6 text-primary-foreground" />
                   </div>
                   <h3 className="text-xl font-semibold text-foreground group-hover:text-accent transition-colors duration-300">

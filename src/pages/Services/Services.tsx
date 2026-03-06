@@ -1,13 +1,13 @@
 import { Card } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { 
-  Palette, 
-  Code, 
-  Search, 
-  Megaphone, 
-  Video, 
-  Share2, 
+import {
+  Palette,
+  Code,
+  Search,
+  Megaphone,
+  Video,
+  Share2,
   Bot,
   Layers
 } from "lucide-react";
@@ -34,7 +34,7 @@ const Services = () => {
     },
     {
       icon: Code,
-      title: "Web Development",
+      title: "SoftWare Development",
       description: "Modern, responsive websites built with cutting-edge technologies for optimal performance.",
       features: ["Frontend Development", "Backend Systems", "E-commerce", "CMS Solutions"],
       link: "/Webdevelopment"
@@ -85,96 +85,84 @@ const Services = () => {
 
   return (
     <>
-       <Navigation />
-    <section id="services" className="py-20 md:container md:mx-auto px-4 bg-gradient-hero relative overflow-hidden">
-  
-      {/* Background Effects */}
-      <div className="absolute inset-0">
-        <div className="absolute top-1/3 left-1/4 w-72 h-72 bg-accent opacity-10 rounded-full blur-3xl animate-float"></div>
-        <div className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-primary opacity-5 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
-      </div>
+      <Navigation />
+      <section id="services" className="py-20 md:container md:mx-auto px-4 bg-gradient-hero relative overflow-hidden">
 
-      <div className="container mx-auto px-4 relative z-10">
-        {/* Header */}
-        <div className="text-center space-y-6 mb-16 animate-slide-up">
-          <Badge variant="secondary" className="bg-gradient-card border border-accent/20 text-accent">
-            Our Services
-          </Badge>
-          
-          <h2 className="text-4xl md:text-6xl font-bold">
-            <span className="bg-gradient-accent bg-clip-text text-transparent">
-              SERVICES
-            </span>
-          </h2>
-          
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            We offer comprehensive digital solutions to help your business grow and succeed in the digital landscape.
-          </p>
+        {/* Background Effects */}
+        <div className="absolute inset-0">
+          <div className="absolute top-1/3 left-1/4 w-72 h-72 bg-accent opacity-10 rounded-full blur-3xl animate-float"></div>
+          <div className="absolute bottom-1/3 right-1/4 w-96 h-96 bg-primary opacity-5 rounded-full blur-3xl animate-float" style={{ animationDelay: '2s' }}></div>
         </div>
 
-        {/* Services Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-          {services.map((service, index) => (
-            <Card 
-              key={index} 
-              className="p-6 bg-gradient-card border border-accent/10 hover:border-accent/30 transition-all duration-500 hover:scale-105 group cursor-pointer animate-scale-in"
-              style={{ animationDelay: `${index * 0.1}s` }}
-            >
-              <div className="space-y-4">
-                {/* Icon */}
-                <div className="w-14 h-14 bg-gradient-accent rounded-xl flex items-center justify-center group-hover:animate-pulse">
-                  <service.icon className="w-7 h-7 text-primary-foreground" />
-                </div>
+        <div className="container mx-auto px-4 relative z-10">
+          {/* Header */}
+          <div className="text-center space-y-6 mb-16 animate-slide-up">
+            <Badge variant="secondary" className="bg-gradient-card border border-accent/20 text-accent">
+              Our Services
+            </Badge>
 
-                {/* Title */}
-                <h3 className="text-xl font-bold text-foreground group-hover:text-accent transition-colors duration-300">
-                  {service.title}
-                </h3>
+            <h2 className="text-4xl md:text-6xl font-bold">
+              <span className="bg-gradient-to-bl from-red-400 to-red-500 bg-clip-text text-transparent">
+                SERVICES
+              </span>
+            </h2>
 
-                {/* Description */}
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  {service.description}
-                </p>
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+              We offer comprehensive digital solutions to help your business grow and succeed in the digital landscape.
+            </p>
+          </div>
 
-                {/* Features */}
-                <div className="space-y-2">
-                  {service.features.map((feature, idx) => (
-                    <div key={idx} className="flex items-center space-x-2">
-                      <div className="w-1.5 h-1.5 bg-accent rounded-full"></div>
-                      <span className="text-sm text-muted-foreground">{feature}</span>
+          {/* Services Grid */}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            {services.map((service, index) => {
+              const CardContent = (
+                <Card
+                  className="p-6 bg-gradient-card border border-accent/10 hover:border-accent/30 transition-all duration-500 hover:scale-105 group cursor-pointer animate-scale-in"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <div className="space-y-4">
+                    <div className="w-14 h-14 bg-gradient-to-tr from-red-800 to-red-500 rounded-xl flex items-center justify-center group-hover:animate-pulse">
+                      <service.icon className="w-7 h-7 text-primary-foreground" />
                     </div>
-                  ))}
-                </div>
 
-                {/* Hover Button */}
-                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  {service.link ? (
-                    <Link to={service.link}>
-                      <Button variant="agency" size="sm" className="w-full">
-                        Learn More
-                      </Button>
-                    </Link>
-                  ) : (
-                    <Button variant="agency" size="sm" className="w-full" disabled>
-                      Coming Soon
-                    </Button>
-                  )}
-                </div>
-              </div>
-            </Card>
-          ))}
-        </div>
+                    <h3 className="text-xl font-bold text-foreground group-hover:text-accent transition-colors duration-300">
+                      {service.title}
+                    </h3>
 
-        {/* CTA Section */}
-        <div className="text-center mt-16 animate-slide-up">
-          <Button variant="hero" size="xl">
-            Get Custom Quote
-          </Button>
+                    <p className="text-muted-foreground text-sm leading-relaxed">
+                      {service.description}
+                    </p>
+
+                    <div className="space-y-2">
+                      {service.features.map((feature, idx) => (
+                        <div key={idx} className="flex items-center space-x-2">
+                          <div className="w-1.5 h-1.5 bg-accent rounded-full"></div>
+                          <span className="text-sm text-muted-foreground">
+                            {feature}
+                          </span>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </Card>
+              )
+
+              return service.link ? (
+                <Link key={index} to={service.link}>
+                  {CardContent}
+                </Link>
+              ) : (
+                <div key={index} className="cursor-not-allowed opacity-70">
+                  {CardContent}
+                </div>
+              )
+            })}
+          </div>
+
         </div>
-      </div>
-    </section>
-          <Footer />
-</>
+      </section>
+      <Footer />
+    </>
   );
 };
 

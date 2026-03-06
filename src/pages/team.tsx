@@ -6,33 +6,47 @@ import Footer from "@/components/Footer";
 import { User, Award, Star, Mail } from "lucide-react"
 
 const teamMembers = [
-  {
+   {
     title: "Chief Executive Officer",
-    name: "John Anderson",
-    description: "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum",
-    skills: ["Growth Marketing", "Brand Development", "Analytics"],
-    image:"https://i.ibb.co/0jF39yZ5/Whats-App-Image-2026-01-27-at-11-19-04-AM.jpg",
+    name: "Abdullah Shahid",
+    description: "Abdullah defines the company vision and strategy, driving growth, brand development, and stakeholder relationships.",
+    skills: ["Leadership", "Growth Strategy", "Brand Development", "Business Development", "Analytics"],
+    image:"https://i.ibb.co/SwdxbTqk/5.png",
   },
   {
-    title: "Chief Technology Officer",
-    name: "Sarah Chen",
-    description: "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum",
-    skills: ["Growth Marketing", "Brand Development", "Analytics"],
-       image:"https://i.ibb.co/0jF39yZ5/Whats-App-Image-2026-01-27-at-11-19-04-AM.jpg",
+    title: "Chief Technical Officer",
+    name: "Anza Bajwa",
+    description: "Anza leads the technology strategy, overseeing system architecture, project management, and technical team guidance.",
+    skills: ["System Architecture", "Project Management", "Technical Leadership", "Software Strategy", "Team Management"],
+    image:"https://i.ibb.co/s9DSG06c/Team.png",
+  },
+    {
+    title: "HR Manager",
+    name: "Zarnish Fatima",
+    description: "Zarnish manages recruitment, employee engagement, and organizational development to ensure a productive workplace culture.",
+    skills: ["Recruitment", "Employee Engagement", "HR Policies", "Talent Management", "Organizational Development"],
+    image:"https://i.ibb.co/s9DSG06c/Team.png",
   },
   {
-    title: "Creative Director",
-    name: "Michael Torres",
-    description: "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum",
-    skills: ["Growth Marketing", "Brand Development", "Analytics"],
-       image:"https://i.ibb.co/0jF39yZ5/Whats-App-Image-2026-01-27-at-11-19-04-AM.jpg",
+    title: "Junior Mobile app developer",
+    name: "Rizwan Ashraf",
+    description: "Rizwan develops cross-platform mobile applications using Flutter and React Native, ensuring smooth performance and great UX.",
+    skills: ["Flutter", "React Native", "Mobile Development", "UI/UX Design", "Cross-platform Apps"],
+    image:"https://i.ibb.co/0jRhTwrG/4.png",
   },
-  {
-    title: "Chief Marketing Officer",
-    name: "Elizabeth Walsh",
-    description: "Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum Lorem ipsum",
-    skills: ["Growth Marketing", "Brand Development", "Analytics"],
-       image:"https://i.ibb.co/0jF39yZ5/Whats-App-Image-2026-01-27-at-11-19-04-AM.jpg",
+    {
+    title: "AI Backend Developer",
+    name: "Nasir sultan",
+    description: "Nasir focuses on building scalable backend systems, RESTful APIs, and database management using Node.js, Express, and PostgreSQL.",
+    skills: ["Node.js", "Express.js", "PostgreSQL", "API Development", "Database Management"],
+    image:"https://i.ibb.co/Z64jVCc9/3.png",
+  },
+ {
+    title: "AI developer",
+    name: "Meerab Shahid",
+    description: "Meerab builds AI and machine learning solutions, including predictive models, NLP applications, and intelligent automation.",
+    skills: ["Machine Learning", "Python", "NLP", "Data Analysis", "AI Development"],
+    image:"https://i.ibb.co/s9DSG06c/Team.png",
   },
 ];
 

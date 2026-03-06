@@ -221,7 +221,7 @@ const ClientFeedback = () => {
                   Join our growing list of satisfied clients and transform your digital presence.
                 </p>
                 <a
-                  href="/"
+                  href="contact"
                   className="group relative inline-flex items-center gap-3 px-8 py-2 overflow-hidden bg-transparent border-2 border-primary rounded-full text-primary font-display text-lg tracking-[0.1em] transition-all duration-500 hover:text-primary-foreground hover:border-transparent"
                 >
                   <span className="relative z-5">GET IN TOUCH</span>
@@ -231,11 +231,7 @@ const ClientFeedback = () => {
               </div>
             </div>
             {/* Footer */}
-            <div className="mt-16 pt-8 border-t border-border/30 text-center">
-              <p className="text-sm text-muted-foreground">
-                © 2024 Studio. All rights reserved.
-              </p>
-            </div>
+          
           </div>
         </div>
       </div>

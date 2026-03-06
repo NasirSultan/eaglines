@@ -97,28 +97,23 @@ const OnlineAdvertising = () => {
     }
   ];
 
-  const navItems = ["Home", "Services", "Platforms", "Portfolio", "Testimonials", "Contact"];
-
   return (
-    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
-      {/* Animated Background */}
+    <div className="min-h-screen bg-gradient-hero d text-foreground overflow-x-hidden">
       <div className="fixed inset-0 opacity-10 pointer-events-none">
         <div className="absolute top-10 left-10 w-72 h-72 bg-primary rounded-full mix-blend-multiply filter blur-xl animate-float"></div>
         <div className="absolute top-32 right-16 w-96 h-96 bg-accent rounded-full mix-blend-multiply filter blur-xl animate-float" style={{ animationDelay: '2s' }}></div>
         <div className="absolute bottom-16 left-20 w-80 h-80 bg-primary rounded-full mix-blend-multiply filter blur-xl animate-float" style={{ animationDelay: '4s' }}></div>
       </div>
 
-      {/* Navbar */}
       <Navigation />
 
-      {/* Hero Section */}
-      <section id="home" className="pt-24 pb-20 px-6">
+      <section id="home" className="pt-32 pb-20 px-6">
         <div className="container mx-auto text-center">
           <div className={`transition-all duration-1000 ${isVisible ? 'animate-bounce-in' : ''}`}>
             <div className="flex items-center justify-center mb-6 animate-fade-in-up">
               <Megaphone className="w-16 h-16 text-primary mr-4 animate-pulse-glow" />
             </div>
-            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+            <h1 className="text-6xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-red-500 to-red-300 bg-clip-text text-transparent">
               ONLINE ADVERTISING
             </h1>
             <h2 className="text-4xl md:text-6xl font-bold mb-8 text-foreground animate-fade-in-up" style={{ animationDelay: '500ms' }}>
@@ -127,20 +122,18 @@ const OnlineAdvertising = () => {
             <p className="text-md md:text-2xl text-muted-foreground mb-12 max-w-4xl mx-auto animate-fade-in-up" style={{ animationDelay: '700ms' }}>
               Drive qualified traffic, increase conversions, and maximize ROI with our data-driven online advertising campaigns across all major platforms.
             </p>
-            <div className="animate-fade-in-up" style={{ animationDelay: '900ms' }}>
-              <Button size="lg" className="mr-4 bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg glow-red animate-pulse-glow">
-                Start Campaign
-                <ChevronRight className="ml-2 w-5 h-5" />
-              </Button>
-              <Button variant="outline" size="lg" className="px-8 py-4 text-lg border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-                View Case Studies
-              </Button>
-            </div>
+            {/* <div className="animate-fade-in-up" style={{ animationDelay: '900ms' }}>
+              <a href="#contact">
+                <Button size="lg" className="mr-4 bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 text-lg glow-red animate-pulse-glow">
+                  Contact Me
+                  <ChevronRight className="ml-2 w-5 h-5" />
+                </Button>
+              </a>
+            </div> */}
           </div>
         </div>
       </section>
 
-      {/* Stats Section */}
       <section className="py-20 px-6 bg-gradient-to-br from-card to-secondary">
         <div className="container mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
@@ -166,7 +159,6 @@ const OnlineAdvertising = () => {
         </div>
       </section>
 
-      {/* Services Section */}
       <section id="services" className="py-20 px-6">
         <div className="container mx-auto">
           <div className="text-center mb-16">
@@ -203,12 +195,14 @@ const OnlineAdvertising = () => {
                     ))}
                   </ul>
                   <div className="text-lg font-bold text-primary mb-4">{service.price}</div>
-                  <Button 
-                    className="w-full bg-secondary hover:bg-primary text-secondary-foreground hover:text-primary-foreground transition-all duration-300 group-hover:glow-red"
-                  >
-                    Get Started
-                    <ChevronRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </Button>
+                  <a href="contact">
+                    <Button
+                      className="w-full bg-secondary hover:bg-primary text-secondary-foreground hover:text-primary-foreground transition-all duration-300"
+                    >
+                      Get Started
+                      <ChevronRight className="ml-2 w-4 h-4" />
+                    </Button>
+                  </a>
                 </CardContent>
               </Card>
             ))}
@@ -216,7 +210,6 @@ const OnlineAdvertising = () => {
         </div>
       </section>
 
-      {/* Platforms Section */}
       <section id="platforms" className="py-20 px-6 bg-card">
         <div className="container mx-auto">
           <div className="text-center mb-16">
@@ -235,7 +228,7 @@ const OnlineAdvertising = () => {
                 className={`text-center p-8 bg-background rounded-xl border border-border hover:border-primary transition-all duration-300 hover:scale-105 animate-fade-in-up group`}
                 style={{ animationDelay: `${index * 100}ms` }}
               >
-                <div className="text-primary mb-4 flex justify-center  group-hover:text-accent transition-colors duration-300" style={{ animationDelay: `${index * 500}ms` }}>
+                <div className="text-primary mb-4 flex justify-center group-hover:text-accent transition-colors duration-300" style={{ animationDelay: `${index * 500}ms` }}>
                   {platform.icon}
                 </div>
                 <h3 className="text-2xl font-bold mb-2 text-foreground group-hover:text-primary transition-colors">{platform.name}</h3>
@@ -246,7 +239,6 @@ const OnlineAdvertising = () => {
         </div>
       </section>
 
-      {/* Testimonials Section */}
       <section id="testimonials" className="py-20 px-6">
         <div className="container mx-auto">
           <div className="text-center mb-16">
@@ -284,7 +276,6 @@ const OnlineAdvertising = () => {
         </div>
       </section>
 
-      {/* Process Section */}
       <section className="py-20 px-6 bg-gradient-to-r from-secondary to-card">
         <div className="container mx-auto">
           <div className="text-center mb-16">
@@ -317,7 +308,6 @@ const OnlineAdvertising = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
       <section id="contact" className="py-20 px-6 bg-card">
         <div className="container mx-auto">
           <div className="text-center mb-16">
@@ -329,40 +319,20 @@ const OnlineAdvertising = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-            {[
-              { icon: <Mail className="w-8 h-8" />, title: "Email", detail: "ads@adpro.com", color: "text-primary" },
-              { icon: <Phone className="w-8 h-8" />, title: "Phone", detail: "+1 (555) 123-ADPRO", color: "text-accent" },
-              { icon: <MapPin className="w-8 h-8" />, title: "Location", detail: "New York, NY", color: "text-primary" }
-            ].map((contact, index) => (
-              <div
-                key={contact.title}
-                className={`text-center p-8 bg-background rounded-xl border border-border hover:border-primary transition-all duration-300 hover:scale-105 animate-fade-in-up`}
-                style={{ animationDelay: `${index * 200}ms` }}
-              >
-                <div className={`${contact.color} mb-4 flex justify-center animate-float`} style={{ animationDelay: `${index * 1000}ms` }}>
-                  {contact.icon}
-                </div>
-                <h3 className="text-xl font-bold mb-2 text-foreground">{contact.title}</h3>
-                <p className="text-muted-foreground">{contact.detail}</p>
-              </div>
-            ))}
-          </div>
+        
 
           <div className="text-center">
-            <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-12 py-4 text-lg glow-red animate-pulse-glow mr-4">
-              Start Free Consultation
-              <ChevronRight className="ml-2 w-5 h-5" />
-            </Button>
-            <Button variant="outline" size="lg" className="px-12 py-4 text-lg border-primary text-primary hover:bg-primary hover:text-primary-foreground">
-              View Portfolio
-            </Button>
+            <a href="contact">
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground px-12 py-4 text-lg glow-red animate-pulse-glow mr-4">
+                Start Free Consultation
+                <ChevronRight className="ml-2 w-5 h-5" />
+              </Button>
+            </a>
           </div>
         </div>
       </section>
 
-      {/* Footer */}
-    <Footer />
+      <Footer />
     </div>
   );
 };

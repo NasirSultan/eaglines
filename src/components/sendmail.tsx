@@ -2,23 +2,22 @@
 
 import { useState } from "react";
 import { Send, Loader2 } from "lucide-react";
-import { Resend } from "resend";
-
-const resend = new Resend("re_8CKfk229_DdVrgJtpPEXatVghuWSEYWEH");
 
 interface FormData {
   name: string;
   email: string;
-  subject: string;
-  message: string;
+  phone: string;
+  title: string;
+  description: string;
 }
 
 const SendMail = () => {
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
-    subject: "",
-    message: "",
+    phone: "",
+    title: "",
+    description: "",
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -33,34 +32,24 @@ const SendMail = () => {
     setIsSubmitting(true);
 
     try {
-      const emailContent = `
-        <div style="font-family: Arial, sans-serif; padding: 20px; background-color: #f4f4f4;">
-          <div style="max-width: 600px; margin: auto; background: #ffffff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1);">
-            <div style="background: #bb4006ff; color: #ffffff; padding: 20px; text-align: center;">
-              <img src="https://eaglines.co/loader.png" alt="Eaglines Logo" style="max-width: 150px; margin-bottom: 10px;">
-              <h1>Eaglines</h1>
-            </div>
-            <div style="padding: 20px; color: #333333;">
-              <h2>New Contact Message</h2>
-              <p><strong>Name:</strong> ${formData.name}</p>
-              <p><strong>Email:</strong> ${formData.email}</p>
-              <p><strong>Subject:</strong> ${formData.subject}</p>
-              <p><strong>Message:</strong></p>
-              <p style="background:#f9f9f9; padding:10px; border-left:3px solid #004aad;">${formData.message}</p>
-            </div>
-            <div style="background: #f0f0f0; padding: 15px; text-align: center; font-size: 12px; color: #555555;">
-              <p>© ${new Date().getFullYear()} Eaglines. All rights reserved.</p>
-            </div>
-          </div>
-        </div>
-      `;
-
-      await resend.emails.send({
-        from: "onboarding@resend.dev",
-        to: "eaglines1@gmail.com",
-        subject: formData.subject || "New Contact Message",
-        html: emailContent,
+      const response = await fetch("https://eaglines-backend.vercel.app/send-email", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          title: formData.title,
+          description: formData.description,
+        }),
       });
+
+      if (!response.ok) throw new Error("Network response was not ok");
+
+      const data = await response.json();
+      console.log("Email sent successfully:", data);
 
       setIsSubmitting(false);
       setIsSubmitted(true);
@@ -87,7 +76,7 @@ const SendMail = () => {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
-      {(["name", "email", "subject"] as (keyof FormData)[]).map((field) => {
+      {(["name", "email", "phone", "title"] as (keyof FormData)[]).map((field) => {
         const hasValue = formData[field];
         const isActive = focusedField === field || hasValue;
         return (
@@ -121,9 +110,9 @@ const SendMail = () => {
       <div className="relative">
         <textarea
           rows={4}
-          value={formData.message}
-          onChange={(e) => handleChange("message", e.target.value)}
-          onFocus={() => setFocusedField("message")}
+          value={formData.description}
+          onChange={(e) => handleChange("description", e.target.value)}
+          onFocus={() => setFocusedField("description")}
           onBlur={() => setFocusedField(null)}
           placeholder=" "
           className="peer w-full bg-transparent border-b-2 border-muted py-3 px-0 text-foreground placeholder-transparent resize-none focus:outline-none focus:border-primary"
@@ -131,14 +120,14 @@ const SendMail = () => {
         />
         <label
           className={`absolute left-0 text-muted-foreground text-sm transition-all duration-300 pointer-events-none ${
-            focusedField === "message" || formData.message ? "-top-5 text-xs text-primary" : "top-3"
+            focusedField === "description" || formData.description ? "-top-5 text-xs text-primary" : "top-3"
           }`}
         >
-          Message
+          Description
         </label>
         <div
           className={`absolute bottom-0 left-0 h-0.5 bg-primary transition-all duration-500 ${
-            focusedField === "message" ? "w-full" : "w-0"
+            focusedField === "description" ? "w-full" : "w-0"
           }`}
         />
       </div>
