@@ -25,7 +25,7 @@ jobs:
         run: npm run build
 
       - name: Deploy to cPanel
-        uses: samkirkland/ftp-deploy-action@v4
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
         with:
           server: ftp.eaglines.co
           username: ${{ secrets.FTP_USERNAME }}
